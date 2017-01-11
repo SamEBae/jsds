@@ -17,6 +17,20 @@ Queue.prototype.peek = function(){
     return this.array[0];
 }
 
+// Insertion:
+// Time Complexity:     O(1)
+// Space Complexity:    O(1)
+Queue.prototype.enqueue = function(value){
+    return this.array.push(value);
+}
+
+// Deletion:
+// Time Complexity:     O(1)
+// Space Complexity:    O(1)
+Queue.prototype.dequeue = function() {
+    return this.array.shift();
+};
+
 // Access:
 // Time Complexity:     O(n)
 // Space Complexity:    O(n)
@@ -46,19 +60,7 @@ Queue.prototype.search = function(element) {
     }
     return false;
 }
-// Insertion:
-// Time Complexity:     O(1)
-// Space Complexity:    O(1)
-Queue.prototype.enqueue = function(value){
-    return this.array.push(value);
-}
 
-// Deletion:
-// Time Complexity:     O(1)
-// Space Complexity:    O(1)
-Queue.prototype.dequeue = function() {
-    return this.array.shift();
-};
 
 // Testing code
 

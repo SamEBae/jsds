@@ -17,6 +17,20 @@ Stack.prototype.peek = function(){
     return this.array[this.array.length-1];
 }
 
+// Insertion:
+// Time Complexity:     O(1)
+// Space Complexity:    O(1)
+Stack.prototype.push = function(value){
+    this.array.push(value);
+}
+
+// Deletion:
+// Time Complexity:     O(1)
+// Space Complexity:    O(1)
+Stack.prototype.pop = function() {
+    return this.array.pop();
+};
+
 // Access:
 // Time Complexity:     O(n)
 // Space Complexity:    O(n)
@@ -46,20 +60,6 @@ Stack.prototype.search = function(element) {
     }
 
     return false;
-};
-
-// Insertion:
-// Time Complexity:     O(1)
-// Space Complexity:    O(1)
-Stack.prototype.push = function(value){
-    this.array.push(value);
-}
-
-// Deletion:
-// Time Complexity:     O(1)
-// Space Complexity:    O(1)
-Stack.prototype.pop = function() {
-    return this.array.pop();
 };
 
 
