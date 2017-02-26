@@ -1,6 +1,4 @@
-
-
-
+// Main
 function DLLNode(key, data) {
     this.key = key;
     this.data = data;
@@ -8,9 +6,9 @@ function DLLNode(key, data) {
     this.prev = null;
 }
 
-function LRUCache(capacity){
+function LRUCache(capacity) {
     this.keys = {};
-    this.capacity  = capacity;
+    this.capacity = capacity;
     this.size = 0;
     this.head = null;
 }
@@ -36,7 +34,7 @@ LRUCache.prototype.insertHead = function(node) {
     temp.prev = node;
 };
 
-LRUCache.prototype.get = function (key) {
+LRUCache.prototype.get = function(key) {
     let node = this.keys[key];
 
     if (node.prev && node.next) {
@@ -45,10 +43,10 @@ LRUCache.prototype.get = function (key) {
         node.prev = null;
         node.next = null;
         this.insertHead(node);
-    } else if ( !node.next ) {
+    } else if (!node.next) {
         let temp = node.prev;
         temp.next = null;
-        node.prev =  None;
+        node.prev = None;
         this.insertHead(node);
     }
     return node.data;
@@ -76,12 +74,11 @@ LRUCache.prototype.print = function() {
     }
 };
 
+var myLRU = new LRUCache(5);
+myLRU.set(1, 1);
+myLRU.set(2, 2);
+myLRU.set(3, 3);
 
-var myLRU = new LRU(5);
-myLRU.set(1,1);
-myLRU.set(2,2);
-myLRU.set(3,3);
-
-myLRU.print();
-myLRU.evict();
-myLRU.print();
+myLRU.print(); // 1, 2, 3
+myLRU.evict(); // pops the oldest element in cache out: 1
+myLRU.print(); // 2, 3
