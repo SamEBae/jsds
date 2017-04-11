@@ -1,6 +1,6 @@
 function TrieNode() {
     this.children = {}; // table
-    this.isCompleted = false;
+    this.endOfWord = false;
 }
 
 function Trie() {
