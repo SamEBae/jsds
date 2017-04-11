@@ -1,3 +1,4 @@
+// Main
 function TrieNode() {
     this.children = {}; // table
     this.endOfWord = false;
@@ -40,7 +41,6 @@ Trie.prototype.search = function(word) {
 Trie.prototype.delete = function(word) {
     this.deleteRecursively(this.root, word, 0);
 }
-
 
 Trie.prototype.deleteRecursively = function(current, word, index) {
     if (index == word.length) {
