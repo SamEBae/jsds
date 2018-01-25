@@ -22,7 +22,8 @@ Graph.prototype.topologicalSortUtil = function(v, visited, stack) {
 };
 
 Graph.prototype.topologicalSort = function() {
-	var visited = [], stack = [];
+	var visited = [],
+		stack 	= [];
 
 	for (var i=0; i < this.vertices; i++) {
 		visited.push(false);
