@@ -9,14 +9,14 @@ function BinarySearchTree(){
 BinarySearchTree.prototype.insert = function(value) {
     var thisNode = {left: null, right: null, value: value};
     if(!this._root){
-        //if there is no root value yet
+        // if there is no root value yet
         this._root = thisNode;
     }else{
-        //loop traverse until
+        // loop traverse until
         var currentRoot = this._root;
         while(1){
             if(currentRoot.value>value){
-                //let's increment if it's not a null and insert if it is a null
+                // let's increment if it's not a null and insert if it is a null
                 if(currentRoot.left!=null){
                     currentRoot = currentRoot.left;
                 }else{
@@ -24,8 +24,8 @@ BinarySearchTree.prototype.insert = function(value) {
                     break;
                 }
             } else if (currentRoot.value<value){
-                //if bigger than current, put it on the right
-                //let's increment if it's not a null and insert if it is a null
+                // if bigger than current, put it on the right
+                // let's increment if it's not a null and insert if it is a null
                 if(currentRoot.right!=null){
                     currentRoot = currentRoot.right;
                 }else{
@@ -33,10 +33,10 @@ BinarySearchTree.prototype.insert = function(value) {
                     break;
                 }
             } else {
-                //case that both are the same
+                // ccase that both are the same
                 break;
             }
-        }   
+        }
     }
 }
 
@@ -86,7 +86,7 @@ BinarySearchTree.protoytype.remove = function(value){
 // Search
 // Time Complexity:     O(h)
 // Space Complexity:    O(h)
-BinarySearchTree.prototype.accessNode: function(value){
+BinarySearchTree.prototype.accessNode  = function(value){
     var currentRoot = this._root,
         found = false;
     while(currentRoot){
@@ -104,7 +104,7 @@ BinarySearchTree.prototype.accessNode: function(value){
 // Search
 // Time Complexity:     O(h)
 // Space Complexity:    O(h)
-BinarySearchTree.prototype.findNode: function(value){
+BinarySearchTree.prototype.findNode  = function(value){
     var currentRoot = this._root,
         found = false;
     while(currentRoot){
