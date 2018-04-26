@@ -1,5 +1,4 @@
 function getHeight(root) {
-
     // helper recursive function 
     function getHeightHelper(root) {
         if (!root) return 0;
@@ -22,7 +21,7 @@ function printKthLevels(root, k) {
     while (queue.length) {
         var temp = queue.shift();
 
-        if (highLimitFlag || getHeight(temp) == rootHeight - k + 1) {
+        if (getHeight(temp) == rootHeight - k + 1) {
             // Kth level is height - k + 1
             arrayKth.push(temp.value);
         }

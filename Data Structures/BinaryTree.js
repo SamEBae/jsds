@@ -33,7 +33,7 @@ BinarySearchTree.prototype.insert = function(value) {
                     break;
                 }
             } else {
-                // ccase that both are the same
+                // case that both are the same
                 break;
             }
         }

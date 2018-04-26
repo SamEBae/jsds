@@ -8,7 +8,7 @@ MaxHeap.prototype.swap = function(index1, index2) {
     this.items[index1] = this.items[index2];
     this.items[index2] = temp;
 };
-
+ 
 MaxHeap.prototype.parentIndex = function(index) {
     return Math.floor((index - 1) / 2);
 };
